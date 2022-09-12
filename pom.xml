@@ -9,6 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>mybatis_helloworld</module>
+      <module>mybatis_parameter</module>
   </modules>
   <packaging>pom</packaging>
 
