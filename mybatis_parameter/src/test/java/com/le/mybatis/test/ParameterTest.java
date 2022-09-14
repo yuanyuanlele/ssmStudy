@@ -49,4 +49,8 @@ public class ParameterTest {
         userMapper.insertUser(user);
         sqlSession.close();
     }
+    @Test
+    public void gounan(){
+        SqlSession sqlSession=SqlSessionUtil.getSqlSession();
+    }
 }
