@@ -50,7 +50,11 @@ public class ParameterTest {
         sqlSession.close();
     }
     @Test
-    public void gounan(){
+    public void testCheckUserByParam(){
         SqlSession sqlSession=SqlSessionUtil.getSqlSession();
+        UserMapper userMapper=sqlSession.getMapper(UserMapper.class);
+        User user=userMapper.checkUserByParam("admin","123456");
+        System.out.println(user);
+        sqlSession.close();
     }
 }
