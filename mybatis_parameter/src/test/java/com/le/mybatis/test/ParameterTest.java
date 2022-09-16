@@ -57,4 +57,20 @@ public class ParameterTest {
         System.out.println(user);
         sqlSession.close();
     }
+    @Test
+    public void testGetUserByIdToMap(){
+        SqlSession sqlSession=SqlSessionUtil.getSqlSession();
+        UserMapper userMapper=sqlSession.getMapper(UserMapper.class);
+        Map<String,Object> map=userMapper.getUserByIdToMap(1);
+        System.out.println(map);
+        sqlSession.close();
+    }
+    @Test
+    public void testGetAllUserByIdToMap(){
+        SqlSession sqlSession=SqlSessionUtil.getSqlSession();
+        UserMapper userMapper=sqlSession.getMapper(UserMapper.class);
+        Map<String,Object> map=userMapper.getAllUserByIdToMap();
+        System.out.println(map);
+        sqlSession.close();
+    }
 }
