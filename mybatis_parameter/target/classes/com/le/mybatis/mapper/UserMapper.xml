@@ -31,4 +31,8 @@
     <select id="getAllUserByIdToMap" resultType="map">
         select * from t_user
     </select>
+
+    <select id="getUserByLike" resultType="pojouser">
+        select * from t_user where username like "%"#{mohu}"%"
+    </select>
 </mapper>

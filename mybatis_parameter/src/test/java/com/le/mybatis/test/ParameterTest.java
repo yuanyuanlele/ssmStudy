@@ -73,4 +73,12 @@ public class ParameterTest {
         System.out.println(map);
         sqlSession.close();
     }
+    @Test
+    public void testGetUserByLike(){
+        SqlSession sqlSession=SqlSessionUtil.getSqlSession();
+        UserMapper userMapper=sqlSession.getMapper(UserMapper.class);
+        User user=userMapper.getUserByLike("ad");
+        System.out.println(user);
+        sqlSession.close();
+    }
 }

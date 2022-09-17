@@ -15,4 +15,5 @@ public interface UserMapper {
     Map<String,Object> getUserByIdToMap(Integer id);
     @MapKey("id")
     Map<String,Object> getAllUserByIdToMap();
+    User getUserByLike(@Param("mohu") String mohu);
 }
