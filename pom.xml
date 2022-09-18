@@ -10,6 +10,7 @@
   <modules>
     <module>mybatis_helloworld</module>
       <module>mybatis_parameter</module>
+      <module>mybatis_resultmap</module>
   </modules>
   <packaging>pom</packaging>
 
