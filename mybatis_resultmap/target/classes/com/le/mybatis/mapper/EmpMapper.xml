@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.le.mybatis.mapper.EmpMapper">
+    <resultMap id="empResultMap" type="Emp">
+        <id column="emp_id" property="empid"></id>
+        <result column="emp_name" property="empname"></result>
+    </resultMap>
+
+    <select id="getEmpByEmpId" resultMap="empResultMap">
+        select * from t_emp where emp_id=#{empid}
+    </select>
+
+    <select id="getEmpByEmpIdOld" resultType="Emp">
+        select * from t_emp where emp_id=#{empid}
+    </select>
+</mapper>
