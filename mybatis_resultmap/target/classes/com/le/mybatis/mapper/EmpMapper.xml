@@ -7,12 +7,49 @@
         <id column="emp_id" property="empid"></id>
         <result column="emp_name" property="empname"></result>
     </resultMap>
+    <resultMap id="empAndDeptResultMap" type="Emp">
+        <id column="emp_id" property="empid"></id>
+        <result column="emp_name" property="empname"></result>
+        <result column="age" property="age"></result>
+        <result column="gender" property="gender"></result>
+        <result column="dept_id" property="dept.deptid"></result>
+        <result column="dept_name" property="dept.deptname"></result>
+    </resultMap>
+    <resultMap id="empAndDeptResultMaptwo" type="Emp">
+        <id column="emp_id" property="empid"></id>
+        <result column="emp_name" property="empname"></result>
+        <result column="age" property="age"></result>
+        <result column="gender" property="gender"></result>
+        <association property="dept" javaType="Dept">
+            <id column="dept_id" property="deptid"></id>
+            <result column="dept_name" property="deptname"></result>
+        </association>
+    </resultMap>
+    <resultMap id="empAndDeptByStepResultMap" type="Emp">
+        <id column="emp_id" property="empid"></id>
+        <result column="emp_name" property="empname"></result>
+        <result column="age" property="age"></result>
+        <result column="gender" property="gender"></result>
+        <association property="dept" select="com.le.mybatis.mapper.DeptMapper.getEmpAndDeptByStep2" column="dept_id">
+        </association>
+    </resultMap>
 
+    <select id="getEmpAndDeptByStep1" resultMap="empAndDeptByStepResultMap">
+        select * from t_emp where emp_id=#{empid}
+    </select>
     <select id="getEmpByEmpId" resultMap="empResultMap">
         select * from t_emp where emp_id=#{empid}
     </select>
 
     <select id="getEmpByEmpIdOld" resultType="Emp">
         select * from t_emp where emp_id=#{empid}
+    </select>
+    
+    <select id="getEmpAndDeptByEmpId" resultMap="empAndDeptResultMaptwo">
+        select t_emp.*,t_dept.*
+        from t_emp
+        left join t_dept
+        on t_emp.dept_id=t_dept.dept_id
+        where t_emp.emp_id=#{empid}
     </select>
 </mapper>
