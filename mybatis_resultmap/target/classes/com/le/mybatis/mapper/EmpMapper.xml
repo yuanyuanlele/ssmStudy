@@ -52,4 +52,7 @@
         on t_emp.dept_id=t_dept.dept_id
         where t_emp.emp_id=#{empid}
     </select>
+    <select id="getDeptAndEmpByStep2" resultType="Emp">
+        select * from t_emp where dept_id=#{deptid}
+    </select>
 </mapper>

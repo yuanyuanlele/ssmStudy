@@ -7,7 +7,32 @@
         <id column="dept_id" property="deptid"></id>
         <result column="dept_name" property="deptname"></result>
     </resultMap>
+    <resultMap id="deptAndEmpResultMap" type="Dept">
+        <id column="dept_id" property="deptid"></id>
+        <result column="dept_name" property="deptname"></result>
+        <collection property="emps" ofType="Emp">
+            <id column="emp_id" property="empid"></id>
+            <result column="emp_name" property="empname"></result>
+            <result column="age" property="age"></result>
+            <result column="gender" property="gender"></result>
+        </collection>
+    </resultMap>
+    <resultMap id="deptAndEmpResultMapByStep" type="Dept">
+        <id column="dept_id" property="deptid"></id>
+        <result column="dept_name" property="deptname"></result>
+        <collection property="emps" select="com.le.mybatis.mapper.EmpMapper.getDeptAndEmpByStep2" column="dept_id"></collection>
+    </resultMap>
     <select id="getEmpAndDeptByStep2" resultMap="deptResultMap">
+        select * from t_dept where dept_id=#{deptid}
+    </select>
+    <select id="getDeptAndEmpByDeptId" resultMap="deptAndEmpResultMap">
+        select *
+        from t_dept
+                 left join t_emp
+                           on t_emp.dept_id=t_dept.dept_id
+        where t_dept.dept_id=#{deptid}
+    </select>
+    <select id="getDeptAndEmpByStep1" resultMap="deptAndEmpResultMapByStep">
         select * from t_dept where dept_id=#{deptid}
     </select>
 </mapper>
