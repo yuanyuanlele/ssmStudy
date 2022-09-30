@@ -4,15 +4,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.le.mybatis.mapper.DynamicSQLMapper">
     <select id="getEmpByCondition" resultType="Emp">
-        select * from t_emp where
-        <if test="empname !=null and empname !=''">
-            emp_name =#{empname}
-        </if>
-        <if test="age !=null and age !=''">
-            and age =#{age}
-        </if>
-        <if test="gender !=null and gender !=''">
-            and gender =#{gender}
-        </if>
+        select * from t_emp
+        <where>
+            <if test="empname !=null and empname !=''">
+                emp_name =#{empname}
+            </if>
+            <if test="age !=null and age !=''">
+                and age =#{age}
+            </if>
+            <if test="gender !=null and gender !=''">
+                and gender =#{gender}
+            </if>
+        </where>
     </select>
 </mapper>
