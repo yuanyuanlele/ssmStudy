@@ -17,4 +17,23 @@
             </if>
         </where>
     </select>
+
+    <insert id="insertMoreEmp">
+        insert into t_emp values
+        <foreach collection="emps" item="emp" separator=",">
+            (null ,#{emp.empname},#{emp.age},#{emp.gender},null)
+        </foreach>
+    </insert>
+
+    <delete id="deleteMoreEmp" >
+        delete from t_emp where emp_id in (
+            <foreach collection="empids" item="empid" separator=",">
+                #{empid}
+            </foreach>
+            )
+    </delete>
+
+    <select id="getAllEmp" resultType="Emp">
+        select * from t_emp
+    </select>
 </mapper>
