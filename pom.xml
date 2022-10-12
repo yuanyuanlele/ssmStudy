@@ -14,6 +14,7 @@
       <module>mybatis_dynamicSQL</module>
       <module>mybatis_mbg</module>
       <module>spring_helloworld</module>
+      <module>spring_ioc_xml</module>
   </modules>
   <packaging>pom</packaging>
 
