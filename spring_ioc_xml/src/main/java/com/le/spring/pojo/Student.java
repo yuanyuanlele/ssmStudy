@@ -1,19 +1,53 @@
 package com.le.spring.pojo;
 
+import java.util.Arrays;
+import java.util.Map;
+
 public class Student {
     private Integer sid;
     private String sname;
     private Integer age;
     private String gender;
+    private Clazz clazz;
+    private String[] hobby;
+    private Map<String,Teacher> teacherMap;
 
     @Override
     public String toString() {
-        return "com.le.spring.pojo.Student{" +
+        return "Student{" +
                 "sid=" + sid +
                 ", sname='" + sname + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
+                ", clazz=" + clazz +
+                ", hobby=" + Arrays.toString(hobby) +
+                ", teacherMap=" + teacherMap +
                 '}';
+    }
+
+    public Map<String, Teacher> getTeacherMap() {
+        return teacherMap;
+    }
+
+    public void setTeacherMap(Map<String, Teacher> teacherMap) {
+        this.teacherMap = teacherMap;
+    }
+
+    public String[] getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String[] hobby) {
+        this.hobby = hobby;
+    }
+
+
+    public Clazz getClazz() {
+        return clazz;
+    }
+
+    public void setClazz(Clazz clazz) {
+        this.clazz = clazz;
     }
 
     public Student() {
@@ -56,5 +90,8 @@ public class Student {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public void set(String s) {
     }
 }

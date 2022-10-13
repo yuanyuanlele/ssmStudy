@@ -11,8 +11,8 @@ public class StudentTest {
     @Test
     public void testStudent(){
         ApplicationContext ioc=new ClassPathXmlApplicationContext("ApplicationContext.xml");
-        Student studentone=(Student) ioc.getBean(Student.class);
-        System.out.println(studentone);
+        Student student=ioc.getBean(Student.class);
+        System.out.println(student);
     }
 
 }

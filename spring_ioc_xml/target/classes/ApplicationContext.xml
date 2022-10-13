@@ -8,5 +8,39 @@
         <property name="sname" value="咱仨"></property>
         <property name="age" value="55"></property>
         <property name="gender" value="男"></property>
+        <property name="clazz">
+            <bean id="clazzinner" class="com.le.spring.pojo.Clazz">
+                <property name="cname" value="的撒"></property>
+                <property name="cid" value="001"></property>
+            </bean>
+        </property>
+        <property name="hobby">
+            <array>
+                <value>唱</value>
+                <value>跳</value>
+                <value>rap</value>
+                <value>篮球</value>
+            </array>
+        </property>
+        <property name="teacherMap">
+            <map>
+                <entry key="1" value-ref="teacher"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="Clazz" class="com.le.spring.pojo.Clazz">
+        <property name="cid" value="001"></property>
+        <property name="cname" value="开噶士大夫班"></property>
+        <property name="students">
+            <list>
+                <ref bean="StudentOne"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="teacher" class="com.le.spring.pojo.Teacher">
+        <property name="tid" value="123"></property>
+        <property name="tname" value="发射点"></property>
     </bean>
 </beans>
