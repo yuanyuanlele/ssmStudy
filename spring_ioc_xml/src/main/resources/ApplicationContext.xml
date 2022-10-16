@@ -44,6 +44,4 @@
         <property name="tname" value="发射点"></property>
     </bean>
 
-    <bean id="studentp" class="com.le.spring.pojo.Student"
-          p:></bean>
 </beans>
