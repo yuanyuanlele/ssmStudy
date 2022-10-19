@@ -15,6 +15,7 @@
       <module>mybatis_mbg</module>
       <module>spring_helloworld</module>
       <module>spring_ioc_xml</module>
+      <module>spring_ioc_annotation</module>
   </modules>
   <packaging>pom</packaging>
 
