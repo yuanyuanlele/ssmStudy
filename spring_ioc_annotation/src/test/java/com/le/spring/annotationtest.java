@@ -14,10 +14,6 @@ public class annotationtest {
     public void test(){
         ApplicationContext ioc=new ClassPathXmlApplicationContext("spring-ioc-annotation.xml");
         UserController userController = ioc.getBean(UserController.class);
-        System.out.println(userController);
-        UserService userService = ioc.getBean(UserService.class);
-        System.out.println(userService);
-        UserDao userDao = ioc.getBean(UserDao.class);
-        System.out.println(userDao);
+        userController.saveUser();
     }
 }
