@@ -16,6 +16,7 @@
       <module>spring_helloworld</module>
       <module>spring_ioc_xml</module>
       <module>spring_ioc_annotation</module>
+      <module>spring-proxy</module>
   </modules>
   <packaging>pom</packaging>
 
