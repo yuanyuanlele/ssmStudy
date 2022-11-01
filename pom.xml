@@ -18,6 +18,7 @@
       <module>spring_ioc_annotation</module>
       <module>spring-proxy</module>
       <module>spring-aop</module>
+      <module>spring-transaction</module>
   </modules>
   <packaging>pom</packaging>
 
