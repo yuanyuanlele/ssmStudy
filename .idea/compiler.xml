@@ -15,6 +15,7 @@
         <module name="mybatis_mbg" />
         <module name="spring-aop" />
         <module name="mybatis_dynamicSQL" />
+        <module name="spring_mvc_helloworld" />
         <module name="spring_ioc_xml" />
         <module name="spring_ioc_annotation" />
       </profile>
