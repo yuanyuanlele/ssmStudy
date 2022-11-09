@@ -20,6 +20,7 @@
       <module>spring-aop</module>
       <module>spring-transaction</module>
       <module>spring_mvc_helloworld</module>
+      <module>spring_mvc_demo</module>
   </modules>
   <packaging>pom</packaging>
 

@@ -9,13 +9,14 @@
         <module name="spring_helloworld" />
         <module name="spring-proxy" />
         <module name="mybatis_resultmap" />
-        <module name="spring-transaction" />
+        <module name="spring_mvc_demo" />
         <module name="mybatis_helloworld" />
+        <module name="spring_mvc_helloworld" />
+        <module name="spring-transaction" />
         <module name="mybatis_parameter" />
         <module name="mybatis_mbg" />
         <module name="spring-aop" />
         <module name="mybatis_dynamicSQL" />
-        <module name="spring_mvc_helloworld" />
         <module name="spring_ioc_xml" />
         <module name="spring_ioc_annotation" />
       </profile>
