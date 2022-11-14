@@ -14,6 +14,7 @@ public class TestRequestMappingController {
     @RequestMapping(
             value = "/hello",
             method = {RequestMethod.GET,RequestMethod.POST}
+            headers = {"referer"}
     )
     public String hello(){
         return "success";
