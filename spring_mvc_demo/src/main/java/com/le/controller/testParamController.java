@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class testParamController {
     @RequestMapping(value = "/param")
     public String getParam(String username,String password){
-        System.out.println("username:"+username+"  password"+password);
+        System.out.println("username:"+username+"  password"+password+"daka");
         return "success";
     }
 }
