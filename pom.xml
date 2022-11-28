@@ -21,6 +21,7 @@
       <module>spring-transaction</module>
       <module>spring_mvc_helloworld</module>
       <module>spring_mvc_demo</module>
+      <module>spring_mvc_rest</module>
   </modules>
   <packaging>pom</packaging>
 
