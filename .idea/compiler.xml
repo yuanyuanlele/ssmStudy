@@ -11,6 +11,7 @@
         <module name="mybatis_resultmap" />
         <module name="spring_mvc_demo" />
         <module name="mybatis_helloworld" />
+        <module name="spring_mvc_ajax" />
         <module name="spring_mvc_helloworld" />
         <module name="spring_mvc_rest" />
         <module name="spring-transaction" />

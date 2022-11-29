@@ -22,6 +22,7 @@
       <module>spring_mvc_helloworld</module>
       <module>spring_mvc_demo</module>
       <module>spring_mvc_rest</module>
+      <module>spring_mvc_ajax</module>
   </modules>
   <packaging>pom</packaging>
 
